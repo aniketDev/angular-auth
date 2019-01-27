@@ -1,0 +1,44 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/EventsApp/dist
+/EventsApp/tmp
+/EventsApp/out-tsc
+
+# dependencies
+EventsApp/node_modules
+/server/node_modules
+# profiling files
+/EventsApp/chrome-profiler-events.json
+/EventsApp/speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/EventsApp/.sass-cache
+/EventsApp/connect.lock
+/EventsApp/coverage
+/EventsApp/libpeerconnection.log
+/EventsApp/npm-debug.log
+/EventsApp/yarn-error.log
+/EventsApp/testem.log
+/EventsApp/typings
+
+# System Files
+.DS_Store
+Thumbs.db
