@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../event.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { EventService } from '../event.service';
 export class LoginComponent implements OnInit {
 
   loginUserData = {};
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private _router: Router) { }
 
   ngOnInit() {
   }
@@ -20,8 +21,11 @@ export class LoginComponent implements OnInit {
         resp => {
           if (resp) {
             console.log(resp);
+            localStorage.setItem('token', resp.token);
+            this._router.navigate(['/special']);
           }
-        }
+        },
+        err => console.log(err)
       );
   }
 

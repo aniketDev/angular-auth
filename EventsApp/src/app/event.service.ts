@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +15,9 @@ export class EventService {
 
   loginUser(user) {
     return this.httpClient.post(this.BaseUrl + 'api/login', user);
+  }
+
+  loggedIn() {
+    return !!localStorage.getItem('token');
   }
 }
